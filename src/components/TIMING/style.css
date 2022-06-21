@@ -1,0 +1,82 @@
+
+.timing_section {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSY70KO9Z_ypUDsZRA_6LSToUynzULkAxCmCA&usqp=CAU');
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: #ffffff;
+    /* margin-bottom: 20px; */
+  }
+  
+  .timing_section .timing_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  
+  .timing_section .box {
+    text-align: center;
+    margin: 25px 10px 0;
+    border: 5px solid #ffffff;
+    border-radius: 100%;
+    width: 190px;
+    height: 190px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+  }
+  
+  .timing_section .box h6 {
+    font-size: 17px;
+    color: #0d9b9b;
+  }
+  .heading_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  
+  .heading_container h2 {
+    position: relative;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+  
+  .heading_container.heading_center {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    text-align: center;
+  }
+  
+  .heading_container p {
+    margin-top: 10px;
+  }
+
+  .day{
+    color: #ffffff;
+  }

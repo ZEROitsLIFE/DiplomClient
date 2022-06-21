@@ -1,0 +1,84 @@
+.prefence_section .heading_container {
+  margin-bottom: 30px;
+  border: 1px solid #0d9b9b;
+}
+.prefence_section {
+  margin-bottom: 10vh;
+}
+.sprefence_section .box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  text-align: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-top: 25px;
+  
+}
+.box_prefence{
+  border: 1px solid #db1626;
+  text-align: center;
+}
+
+.box_prefence .img-box img{
+border-radius: 50%;
+}
+
+.prefence_section .box .img-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 200px;
+  min-width: 200px;
+  height: 200px;
+  border-radius: 100%;
+  background-color: #0d9b9b;
+  margin-bottom: 15px;
+}
+
+.prefence_section .box .img-box img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+.prefence_section .box .detail-box {
+  align-items: center;
+}
+.prefence_section .box .detail-box h5 {
+  color: #333333;
+  font-weight: 800;
+  position: relative;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+.prefence_section .box .detail-box h6 {
+  font-size: 15px;
+  color: #444;
+}
+
+.prefence_section .box .detail-box a {
+  display: inline-block;
+  padding: 8px 35px;
+  border: 1px solid #e7c357;
+  border-radius: 5px;
+  background-color: #e7c357;
+  color: #000000;
+  margin-top: 25px;
+}
+
+.prefence_section .box .detail-box a:hover {
+  background-color: transparent;
+  color: #e7c357;
+}
