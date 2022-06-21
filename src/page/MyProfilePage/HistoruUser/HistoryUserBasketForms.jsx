@@ -15,11 +15,11 @@ const [HistoryUserBasketState, setHistoryUserBasketState] = useState()
 
   const onClick = async () => {
     const HistUser = history.value.filter(hist => hist.basket_id === basket.id );
+    console.log(HistUser)
     setHistoryUserBasketState(HistUser)
-    console.log(HistoryUserBasket)
   };
 
-  return <HistoryUserBasket onClick={onClick} />;
+  return <HistoryUserBasket onClick={onClick} userHistoru={HistoryUserBasketState} service={service} type={type} />;
 };
 
 export default HistoryUserBasketForm;

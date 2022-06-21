@@ -3,7 +3,7 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 export const fetchHistory = createAsyncThunk(
   "history/fetchHistory",
   async () => {
-    const response = await fetch("https://relax-pluss-server.herokuapp.com/api/history/findAll");
+    const response = await fetch("http://localhost:5000/api/history/findAll");
     const data = await response.json();
     // console.log(data)
     return data;

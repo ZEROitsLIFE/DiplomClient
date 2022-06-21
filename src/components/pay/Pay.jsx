@@ -46,6 +46,7 @@ const Pay = ({typeOptions, typeChange}) => {
                     <th scope="col">Зарезервовано</th>
                     <th scope="col">Дата</th>
                     <th scope="col">Час</th>
+                    <th scope="col"></th>
                   </tr>
                 </thead>
                 <tbody>

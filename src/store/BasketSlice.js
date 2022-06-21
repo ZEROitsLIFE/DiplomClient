@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchBasket = createAsyncThunk("basket/fetchBasket", async (id) => {
-  const response = await fetch("https://relax-pluss-server.herokuapp.com/api/basket/findUser", {id})
+  const response = await fetch("http://localhost:5000/api/basket/findUser", {id})
   const data = await response.json();
   console.log("FetchBasket=>", data);
   return data;
@@ -16,10 +16,8 @@ export const basketSlice = createSlice({
   name: "basket",
   initialState: {
     isFetch: false,
-    value: {
       id: null,
       user: null,
-    },
   },
   reducers: {
     addBasket: (state, action) => {
@@ -37,8 +35,9 @@ export const basketSlice = createSlice({
             console.log("State is peddom")
             state.isFetch = false;
           } else {
-            state.value.id=initialValue.id;
-            state.value.user=initialValue.user
+            state.id= null
+            state.user= null
+            state.isFetch = false;
           } 
     },
     // changeHistoryComplited: (state, action) => {

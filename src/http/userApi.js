@@ -63,16 +63,17 @@ export const getUserInfo = async (userId) =>{
 
   export const chekUserPhone = async (number) =>{
     try {
-      const response = await $host.post('/userinfo/getPhone', {Number: number});
+      const response = await $host.post('userinfo/getPhone', {Number: number});
       return response.data
     } catch (error) {
       return error.response.data.message
     }
   };
   
-  export const changeUserInfo = async (user_id, number,name) =>{
+  export const changeUserInfoApi = async (user_id, number,name) =>{
     try {
-      const response = await $host.post('/userinfo/changeUserInfo', {user_id:user_id, phone_number:  number, first_name :name});
+      const response = await $authHost.post('userinfo/changeUserInfo', {user_id, number, name});
+      console.log("responce=",response)
       return response.data
     } catch (error) {
       return error.response.data.message

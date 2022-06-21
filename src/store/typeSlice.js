@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const fetchType = createAsyncThunk("type/fetchType", async () => {
-  const response = await fetch("https://relax-pluss-server.herokuapp.com/api/type/findAll");
+  const response = await fetch("http://localhost:5000/api/type/findAll");
   const data = await response.json();
   console.log("Type FETCH", data);
   return data;

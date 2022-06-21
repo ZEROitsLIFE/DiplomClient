@@ -13,12 +13,7 @@ import { changeHistoryComplited } from "../../../../store/historySlice";
 const History = () => {
   const dispatch = useDispatch();
   
-
-  // useEffect(() => {
-  //   dispatch(fetchHistory());
-  //   dispatch(fetchService());
-  //   dispatch(fetchType());
-  // });
+  const [users, serUser] = useState()
  
   const type = useSelector((state) => state.type);
   const history = useSelector((state) => state.history);

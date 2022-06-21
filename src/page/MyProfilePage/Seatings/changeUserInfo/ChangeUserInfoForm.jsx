@@ -1,7 +1,8 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { changeUserInfo } from "../../../../http/userApi";
+import {  changeUserInfoApi } from "../../../../http/userApi";
 import ChangeUserInfoReduxForm from "./changeUserInfo";
+import {changeUserInfo} from '../../../../store/userInfoSlice'
 
 const Refister = (props) => {
   const user_id = useSelector((state) => state.user.id);
@@ -9,17 +10,17 @@ const Refister = (props) => {
 
   const onSubmit = async (formData) => {
     console.log(formData);
-    const Temp = await chengeUserInfo(
+   const Temp =  chengeUserInfoFunc(
       user_id,
       formData.inputPhone,
       formData.firstname
     );
-    dispatch(changeUserInfo(Temp))
+   
   };
 
-  const chengeUserInfo = async (user_id, number, name) => {
-    const data = await changeUserInfo(user_id, number, name);
-    console.log(data);
+  const chengeUserInfoFunc = async (user_id, number, name) => {
+   const data = await changeUserInfoApi(user_id, number, name);
+    dispatch(changeUserInfo(data))
   };
   return (
     <div className="container">

@@ -21,7 +21,6 @@ export const userInfoSlice = createSlice({
         state.user_id = action.payload.user_id;
         state.first_name = action.payload.first_name;
         state.phone_number = action.payload.phone_number;
-        state.sex = action.payload.sex;
       }
     },
     removeInfo: (state) => {

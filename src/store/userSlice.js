@@ -1,7 +1,7 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 
 export const chekUser = createAsyncThunk("type/chekUser", async () => {
-  const response = await fetch("https://relax-pluss-server.herokuapp.com/api/user/refresh");
+  const response = await fetch("http://localhost:5000/api/user/refresh");
   localStorage.setItem("token", response.data.accessToken);
   // console.log(response)
   const data = await response.json();

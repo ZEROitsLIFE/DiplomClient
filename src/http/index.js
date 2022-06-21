@@ -2,11 +2,11 @@ import axios from "axios";
 
 const $host = axios.create({
     withCredentials: true,
-    baseURL: 'https://relax-pluss-server.herokuapp.com/'
+    baseURL: 'http://localhost:5000/api/'
 })
 
 const $authHost = axios.create({
-    baseURL: 'https://relax-pluss-server.herokuapp.com/api'
+    baseURL: 'http://localhost:5000/api/'
 })
 
 const authInterceptor = config => {

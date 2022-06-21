@@ -1,6 +1,5 @@
 import React from "react";
 import { Field, reduxForm } from "redux-form";
-import normalizePhone from "./normalise";
 
 const changeUserInfo = (props) => {
   return (
@@ -20,7 +19,7 @@ const changeUserInfo = (props) => {
         <div className="form-group">
           <label for="inputPhone">Phone</label>
           <Field
-            type="phone"
+            type="tell"
             className="form-control"
             id="inputPhone"
             name="inputPhone"
@@ -28,19 +27,6 @@ const changeUserInfo = (props) => {
             component={"input"}
           />
         </div>
-        {/* <div className="form-group col-md-4">
-          <label for="inputState6">State</label>
-          <Field
-            id="inputState6"
-            className="form-control"
-            name="inputSelect"
-            component={"select"}
-          >
-            <option value={"ELSE"}>Choose...</option>
-            <option value={"Male"}>Male</option>
-            <option value={"Female"}>Female</option>
-          </Field>
-        </div> */}
       </div>
       <div className="btn-submit">
         <button type="submit" className="btn btn-primary">
