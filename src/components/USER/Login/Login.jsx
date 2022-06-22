@@ -12,6 +12,8 @@ const Login = (props) => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const [modalActive, setModalActive] = useState(true);
+
   const isLogin = useSelector((state) => state.user.isLogin);
   const user = useSelector((state) => state.user);
 

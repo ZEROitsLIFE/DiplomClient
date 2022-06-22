@@ -4,7 +4,6 @@ import "./style.css";
 import foto from "../../static/OIP.png";
 import { fetchService } from "../../store/serviceSlice";
 import { NavLink } from "react-router-dom";
-import Modal from "../ModalForm/Modal";
 
 
 
@@ -50,7 +49,6 @@ const Service = () => {
                           <button class="button-54" onClick={()=>setIsOpen(true)}>Замовити</button>
                           </NavLink>
                         )}
-                        {isOpen && <Modal setIsOpen={setIsOpen} />}
                       </div>
                     </div>
                   );

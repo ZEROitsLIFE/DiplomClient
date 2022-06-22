@@ -9,7 +9,6 @@ import {
 import { changeHistoryComplited } from "../../../../store/historySlice";
 import { addUsers, fetchUsers } from "../../../../store/usersSlice";
 
-// const useBeforeRender = (callback, deps) => {
 
 const History = () => {
   const dispatch = useDispatch();

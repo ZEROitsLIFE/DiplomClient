@@ -56,6 +56,7 @@ const CreateHistory = (props) => {
            
             <br />
             <label for="standard-select">Виберіть Час</label>
+            <br/>
             <Field
               id="standard-select"
               class="select"

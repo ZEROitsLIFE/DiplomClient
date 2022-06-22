@@ -17,7 +17,8 @@ const cak=[{value:"1",label:"1"},{value:"2",label:"2"},]
         <div className="form-row">
           <div className="form-group col-md-6">
           
-            <label for="standard-select">Тип Послкги</label>
+            <label for="standard-select">Тип Послуги</label>
+            <br/>
               <Field
               id="standard-select"
                class="select"
@@ -52,6 +53,7 @@ const cak=[{value:"1",label:"1"},{value:"2",label:"2"},]
               component={"input"}
             />
             <label for="name">Ціна</label>
+            <br/>
             <Field
               type="number"
               id="name"

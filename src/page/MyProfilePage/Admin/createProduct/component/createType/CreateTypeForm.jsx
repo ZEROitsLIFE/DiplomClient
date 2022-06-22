@@ -1,30 +1,33 @@
-import React from 'react'
-import { useDispatch } from 'react-redux';
-import { createType } from '../../../../../../http/serviceApi';
-import { addService } from '../../../../../../store/serviceSlice';
-import { addType } from '../../../../../../store/typeSlice';
-import CreateTypeReduxForm from './createType'
+import React from "react";
+import { useDispatch } from "react-redux";
+import { createType } from "../../../../../../http/serviceApi";
+import { addType } from "../../../../../../store/typeSlice";
+import CreateTypeReduxForm from "./createType";
 
 const CreateTypeForm = () => {
-  const dispatch = useDispatch()
+  const dispatch = useDispatch();
 
-   const onSubmitt = async(formData) =>{
+  
+
+  const onSubmitt = async (formData) => {
     console.log(formData);
-    if(!formData.name) {alert('Тип пустий')}
-    else {
-        const data = await createType(formData.name);
-        console.log("a=",data);
-        if(data !== undefined){
-          dispatch(addType(data))
-        }
+    if (!formData.name) {
+      alert("Тип пустий");
+    } else {
+      const data = await createType(formData.name);
+      console.log("a=", data);
+      if (data !== undefined) {
+        dispatch(addType(data));
+        alert("Тип створено")
+      }
     }
-   }
-   
-
+  };
 
   return (
-    <CreateTypeReduxForm onSubmit={onSubmitt} />
-  )
-}
+    <CreateTypeReduxForm
+      onSubmit={onSubmitt}
+    />
+  );
+};
 
-export default CreateTypeForm
+export default CreateTypeForm;

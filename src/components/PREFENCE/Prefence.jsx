@@ -7,21 +7,21 @@ import foto3 from '../../static/icon/Prefence-3.jpg'
 
 const Prefence = () => {
   return (
-    <section id="prefence" class="prefence_section layout_padding-bottom">
-    <div class="container ">
-      <div class="prefence_container">
-        <div class="heading_container heading_center">
+    <section id="prefence" className="prefence_section layout_padding-bottom">
+    <div className="container ">
+      <div className="prefence_container">
+        <div className="heading_container heading_center">
           <h2>
             Services
           </h2>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="box_prefence">
-              <div class="img-box">
+        <div className="row">
+          <div className="col-md-4">
+            <div className="box_prefence">
+              <div className="img-box">
                 <img src={foto1}  alt=""/>
               </div>
-              <div class="detail-box">
+              <div className="detail-box">
                 <h5>
                   Надійність
                 </h5>
@@ -31,12 +31,12 @@ const Prefence = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="box_prefence">
-              <div class="img-box">
+          <div className="col-md-4">
+            <div className="box_prefence">
+              <div className="img-box">
                 <img src={foto2}  alt=""/>
               </div>
-              <div class="detail-box">
+              <div className="detail-box">
                 <h5>
                   Комфорт
                 </h5>
@@ -46,12 +46,12 @@ const Prefence = () => {
               </div>
             </div>
           </div>
-          <div class="col-md-4">
-            <div class="box_prefence">
-              <div class="img-box">
+          <div className="col-md-4">
+            <div className="box_prefence">
+              <div className="img-box">
                 <img src={foto3} alt=""/>
               </div>
-              <div class="detail-box">
+              <div className="detail-box">
                 <h5>
                   Якісні засоби
                 </h5>

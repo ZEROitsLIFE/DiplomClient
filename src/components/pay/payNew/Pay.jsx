@@ -4,15 +4,15 @@ import { Field, reduxForm } from "redux-form";
 const Pay = (props) => {
   console.log("props", props);
   return (
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-12 col-lg-10 col-xl-8 mx-auto">
-          <h2 class="h3 mb-4 page-title">Settings</h2>
+    <div className="container">
+      <div className="row justify-content-center">
+        <div className="col-12 col-lg-10 col-xl-8 mx-auto">
+          <h2 className="h3 mb-4 page-title">Settings</h2>
           <form onSubmit={props.handleSubmit}>
             <label for="standard-select">Виберіть послугу</label>
             <Field
               id="standard-select"
-              class="select"
+              className="select"
               name="type"
               component="select"
               onChange={(e) => props.onSelectType(e.target.value)}
@@ -26,7 +26,7 @@ const Pay = (props) => {
             <label for="standard-select-2">Виберіть послугу</label>
             <Field
               id="standard-select-2"
-              class="select"
+              className="select"
               name="type"
               component="select"
               onChange={(e) => props.onSelectService(e.target.value)}
@@ -38,7 +38,7 @@ const Pay = (props) => {
             </Field>
             {/* <Field
               id="standard-select-3"
-              class="button"
+              className="button"
               name="button"
               component="button"
               placeholder="Обновіть таблицю"
@@ -46,8 +46,8 @@ const Pay = (props) => {
             <button>Обновіть таблицю</button>
           </form>
 
-          <table class="table">
-            <thead class="thead-dark">
+          <table className="table">
+            <thead className="thead-dark">
               <tr>
                 <th scope="col">#</th>
                 <th scope="col">Тип</th>

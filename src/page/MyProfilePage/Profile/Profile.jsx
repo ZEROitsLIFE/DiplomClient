@@ -1,10 +1,18 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import "./style.css";
+import { useEffect } from "react";
+import { fetchHistory } from "../../../store/historySlice";
 
 const Profile = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchHistory());
+  });
+
   const userInfoState = useSelector((state) => state.userInfo);
   const userState = useSelector((state) => state.user);
 
@@ -16,23 +24,8 @@ const Profile = () => {
           <div class="my-4">
             <ul class="nav nav-tabs mb-4" id="myTab" role="tablist">
               <li class="nav-item">
-                
-                  <div
-                    class="nav-link active"
-                    id="home-tab"
-                    data-toggle="tab"
-                    href="#home"
-                    role="tab"
-                    aria-controls="home"
-                    aria-selected="false"
-                  >
-                    Profile
-                  </div>
-                
-              </li>
-              <li class="nav-item">
-               <NavLink to={"/userhistory"}> <div
-                  class="nav-link "
+                <div
+                  class="nav-link active"
                   id="home-tab"
                   data-toggle="tab"
                   href="#home"
@@ -40,8 +33,24 @@ const Profile = () => {
                   aria-controls="home"
                   aria-selected="false"
                 >
-                  Історія
-                </div></NavLink>
+                  Profile
+                </div>
+              </li>
+              <li class="nav-item">
+                <NavLink to={"/userhistory"}>
+                  {" "}
+                  <div
+                    class="nav-link "
+                    id="home-tab"
+                    data-toggle="tab"
+                    href="#home"
+                    role="tab"
+                    aria-controls="home"
+                    aria-selected="false"
+                  >
+                    Історія
+                  </div>
+                </NavLink>
               </li>
 
               <li class="nav-item">
@@ -62,7 +71,14 @@ const Profile = () => {
               </li>
             </ul>
             <div class="row mt-5 align-items-center">
-              {userState.isActivated===false?<p>Ви не Активували акаунт. Ваша активність буде зменшена. Для активації перейдіть в пошту.</p>:<p></p>}
+              {userState.isActivated === false ? (
+                <p>
+                  Ви не Активували акаунт. Ваша активність буде зменшена. Для
+                  активації перейдіть в пошту.
+                </p>
+              ) : (
+                <p></p>
+              )}
               <div class="col-md-3 text-center mb-5">
                 <div class="avatar avatar-xl">
                   <img

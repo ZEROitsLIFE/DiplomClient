@@ -87,6 +87,7 @@ const AdminProfile = () => {
                   <div className="row align-items-center">
                     <div className="col-md-7">
                       <h4 className="mb-1">{userInfoState.first_name}</h4>
+                      <h4 class="mb-1">{userInfoState.email}</h4>
                       {/* <p className="small mb-3">
                         <span className="badge badge-dark">New York, USA</span>
                       </p> */}

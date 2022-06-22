@@ -24,6 +24,7 @@ const createType = (props) => {
           </button>
         </div>
       </form>
+     
     </div>
   );
 };

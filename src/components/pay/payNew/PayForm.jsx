@@ -2,12 +2,11 @@ import React, { useEffect } from "react";
 import PayRedux from "./Pay";
 import { useSelector, useDispatch } from "react-redux";
 import { useState } from "react";
-import HistoryUserBasket from "../../../page/MyProfilePage/HistoruUser/HistoryUserBasket";
 import { historyReserved } from "../../../http/serviceApi";
 import {
   changeHistoryReserved,
-  fetchHistory,
 } from "../../../store/historySlice";
+
 
 const PayForm = () => {
   const dispatch = useDispatch();

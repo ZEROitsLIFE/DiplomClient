@@ -34,6 +34,7 @@ const CreateServiceForm = () => {
       console.log("object", data);
       if(data !== undefined){
         dispatch(addService(data));
+        alert('Послуга створена')
       }
       
     }
