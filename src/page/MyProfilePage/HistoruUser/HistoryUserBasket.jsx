@@ -85,7 +85,7 @@ const HistoryUserBasket = (props) => {
                       );
                     })
                   ) : (
-                    <p>s</p>
+                    <p>Нічого не додано</p>
                   )}
                 </tbody>
               </table>

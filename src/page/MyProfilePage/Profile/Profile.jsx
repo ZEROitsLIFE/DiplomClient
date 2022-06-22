@@ -62,7 +62,7 @@ const Profile = () => {
               </li>
             </ul>
             <div class="row mt-5 align-items-center">
-              {userState.isActivated===false?<p>Ви не Активували акаунт. Ваша активність буде зменшена</p>:<p>sss</p>}
+              {userState.isActivated===false?<p>Ви не Активували акаунт. Ваша активність буде зменшена. Для активації перейдіть в пошту.</p>:<p></p>}
               <div class="col-md-3 text-center mb-5">
                 <div class="avatar avatar-xl">
                   <img

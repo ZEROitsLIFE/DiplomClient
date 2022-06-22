@@ -145,14 +145,12 @@ export const getBasketByUserId = async (userId) => {
   }
 };
 
-// export const getUsers = async (userId) => {
-//   try {
-//     const reponse = await $authHost.post("basket/findBasketbyid", {
-//       userId,
-//     });
-//     console.log("Rersponce", reponse.data);
-//     return reponse.data;
-//   } catch (error) {
-//     alert(error.response.data.message);
-//   }
-// };
+export const getUsers = async () => {
+  try {
+    const reponse = await $authHost.get("user/users");
+    console.log("Rersponce", reponse.data);
+    return reponse.data;
+  } catch (error) {
+    alert(error.response.data.message);
+  }
+};

@@ -1,6 +1,5 @@
 .prefence_section .heading_container {
   margin-bottom: 30px;
-  border: 1px solid #0d9b9b;
 }
 .prefence_section {
   margin-bottom: 10vh;
@@ -21,7 +20,6 @@
   
 }
 .box_prefence{
-  border: 1px solid #db1626;
   text-align: center;
 }
 

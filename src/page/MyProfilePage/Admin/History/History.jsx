@@ -3,25 +3,25 @@ import { useDispatch, useSelector } from "react-redux";
 import { NavLink } from "react-router-dom";
 import {
   getUserById,
+  getUsers,
   historyComplited,
-  
 } from "../../../../http/serviceApi";
 import { changeHistoryComplited } from "../../../../store/historySlice";
+import { addUsers, fetchUsers } from "../../../../store/usersSlice";
 
 // const useBeforeRender = (callback, deps) => {
 
 const History = () => {
   const dispatch = useDispatch();
-  
-  const [users, serUser] = useState()
- 
+
+
   const type = useSelector((state) => state.type);
   const history = useSelector((state) => state.history);
   const service = useSelector((state) => state.service);
+  const userss = useSelector((state) => state.users);
   console.log("HISTORY_IS_FETCH->", history.isFetch);
   console.log("Service_IS_FETCH->", service.isFetch);
   console.log("Type_IS_FETCH->", type.isFetch);
-
 
   // НЕ вткористовувати авайт
   const find = async (id) => {
@@ -39,8 +39,9 @@ const History = () => {
     // console.log(history.value.sort((a,b)=>{return a.date-b.date}));//////////////////////////////////////////////////////////////////////////////////////////////////////////
   };
 
+  // console.log("Users",users);
   let i = 0;
-  // if (history.isFetch && type.isFetch && service.isFetch) {
+  if (userss.isFetch ===true) {
   return (
     <div class="container">
       <div class="row justify-content-center">
@@ -124,22 +125,28 @@ const History = () => {
                   );
                   console.log("T=>", typeData);
 
+                  console.log("UUUSSSEERRRSSS", userss.value)
+                  const usersInfo = userss.value.find(u => u.baskt === data.basket)
+                  console.log("object", usersInfo);
+
                   // const user = find(data.basket);
                   // console.log("USER=>", user);
                   i++;
                   return (
-                    <tr>
+                    <tr key={data.name}>
                       <th scope="row">{i}</th>
                       <td>{typeData.name}</td>
                       <td>{serviseData.name}</td>
                       <td>{data.reserved ? "+" : "-"}</td>
-                      <td>{}</td>
+                      <td>{usersInfo===undefined?<p></p>:`${usersInfo.name} ${usersInfo.number}`}</td>
                       <td>{data.date.split("T")[0]}</td>
                       <td>{data.time}</td>
                       <td>{data.complited ? "+" : "-"}</td>
                       <td>
-                        {data.complited === false && data.reserved ===true ? (
-                          <button onClick={() => onClick(data._id)}>Завершити</button>
+                        {data.complited === false && data.reserved === true ? (
+                          <button onClick={() => onClick(data._id)}>
+                            Завершити
+                          </button>
                         ) : (
                           <></>
                         )}
@@ -149,13 +156,12 @@ const History = () => {
                 })}
               </tbody>
             </table>
-
           </div>
         </div>
       </div>
     </div>
   );
 };
-// };
+};
 
 export default History;

@@ -8,6 +8,7 @@ import serviceSlice from './serviceSlice';
 import userInfoSlice from './userInfoSlice';
 import historySlice from './historySlice';
 import BasketSlice from './BasketSlice';
+import usersSlice  from './usersSlice';
 
 
 export const store = configureStore({
@@ -19,6 +20,7 @@ export const store = configureStore({
         userInfo: userInfoSlice,
         history: historySlice,
         basket: BasketSlice,
+        users: usersSlice,
         form: formReduser,
     },
     // middleware: getDefaultMiddleware({

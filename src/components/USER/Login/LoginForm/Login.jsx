@@ -34,12 +34,12 @@ const LoginForm = (props) => {
 
         <div className="form-group">
           <button type="submit" className="btn btn-primary btn-lg">
-            Sign Up
+            Ввійти
           </button>
         </div>
       </form>
       <div className="hint-text">
-        <NavLink to="/registr"> Havent an account? Sing up here</NavLink>
+        <NavLink to="/registr"> Не маєте акаунта? Зареєструватися</NavLink>
       </div>
     </div>
   );

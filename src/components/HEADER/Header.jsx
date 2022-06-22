@@ -48,16 +48,16 @@ const Header = (props) => {
         <Navbar.Collapse id="responsive-navbar-nav show">
           <Nav className="me-auto" activeKey={window.location.pathname}>
             <Nav.Link as={Link} to="/">
-              <p className="button-88">Home</p>
+              <p className="button-88">Головна</p>
             </Nav.Link>
             <Nav.Link as={Link} to="/service">
-              <p className="button-88 ">Service</p>
+              <p className="button-88 ">Послуги</p>
             </Nav.Link>
             <Nav.Link as={Link} to="/about" className="item-to-left">
-              <p className="button-88">About Us</p>
+              <p className="button-88">Про нас</p>
             </Nav.Link>
             <Nav.Link as={Link} to="/contact">
-              <p className="button-88">Contact</p>
+              <p className="button-88">Контакти</p>
             </Nav.Link>
             {/* <NavDropdown title="" className="collapsible-nav-dropdown">
               <NavDropdown.Item as={Link} to="/">
@@ -83,7 +83,7 @@ const Header = (props) => {
                 </Nav.Link>
                 <NavDropdown title="" className="collapsible-nav-dropdown">
                   <NavDropdown.Item as={Link} to="/" onClick={Logout}>
-                    <p className="text-color">Logout</p>
+                    <p className="text-color">Вийти</p>
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
@@ -104,7 +104,7 @@ const Header = (props) => {
                 </Nav.Link>
                 <NavDropdown title="" className="collapsible-nav-dropdown">
                   <NavDropdown.Item as={Link} to="/" onClick={Logout}>
-                    <p className="text-color">Logout</p>
+                    <p className="text-color">Вийти</p>
                   </NavDropdown.Item>
                 </NavDropdown>
               </Nav>
@@ -112,10 +112,10 @@ const Header = (props) => {
           ) : (
             <Nav>
               <Nav.Link as={Link} to="/login">
-                <p className="text-color button-34">Login</p>
+                <p className="text-color button-34">Ввійти</p>
               </Nav.Link>
               <Nav.Link as={Link} to="/registr">
-                <p className="button-33">Regestration</p>
+                <p className="button-33">Реєстрація</p>
               </Nav.Link>
             </Nav>
           )}

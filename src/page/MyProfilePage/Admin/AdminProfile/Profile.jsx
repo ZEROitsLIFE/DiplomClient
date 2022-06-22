@@ -1,13 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 import './style.css'
 import { NavLink } from "react-router-dom";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { addUsers } from "../../../../store/usersSlice";
+import { getUsers } from "../../../../http/serviceApi";
 
 
 const AdminProfile = () => {
+  const dispatch = useDispatch()
   const userInfoState = useSelector(state=>state.userInfo)
   const userRole = useSelector(state => state.user.role)
-
+  useEffect(() => {
+    const a = async () => {
+      const aa = await getUsers();
+      // const a
+      console.log("aa", aa);
+      dispatch(addUsers(aa))
+    };
+    a();
+  }, []);
   return (
     <div className="container">
       <div className="row justify-content-center">

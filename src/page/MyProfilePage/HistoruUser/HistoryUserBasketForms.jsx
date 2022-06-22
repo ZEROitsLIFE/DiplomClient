@@ -14,7 +14,7 @@ const HistoryUserBasketForm = () => {
 const [HistoryUserBasketState, setHistoryUserBasketState] = useState()
 
   const onClick = async () => {
-    const HistUser = history.value.filter(hist => hist.basket_id === basket.id );
+    const HistUser = history.value.filter(hist => hist.basket === basket.id );
     console.log(HistUser)
     setHistoryUserBasketState(HistUser)
   };
